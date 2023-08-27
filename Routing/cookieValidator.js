@@ -1,0 +1,14 @@
+// Assuming you have an externallyValidateCookie function
+async function externallyValidateCookie(testCookie) {
+    // Your validation logic here
+  }
+  
+  async function cookieValidator(cookies) {
+    try {
+      await externallyValidateCookie(cookies.testCookie);
+    } catch {
+      throw new Error('Invalid cookies');
+    }
+  }
+  
+  module.exports = cookieValidator;
